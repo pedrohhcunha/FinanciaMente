@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,700&display=swap%27');
+:root{
+    --blueLight: #4A49FF;
+    --blueDark: #212170;
+    --white: #f6f5ff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    width: 100vw;
+    height: 50px;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+header ul{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+    list-style: none;
+}
+header ul li a{
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    padding: 15px 0;
+    margin: 0 10px;
+}
+header ul li a span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    border-radius: 25%;
+    background: var(--white);
+    transition: .5s;
+}
+header ul li a:hover span{
+    width: 100%;
+}
+header ul li a img{
+    height: 35px;
+    padding-right: 15px;
+}
+.first-section{
+    display: grid;
+    grid-template-columns:60% 40%;
+    height: 100vh;
+    width: 100%;
+}
+.first-section .left-area{
+    background: linear-gradient(to right, var(--blueDark), var(--blueLight));
+    padding: 200px 5vw;    
+    
+}
+.first-section .left-area h1{
+    color: var(--white);
+    font-size: 40px;
+}
+.first-section .left-area p{
+    color: var(--white);
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 15px;
+    line-height: 27px;
+}
+.first-section .left-area .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 15px;
+}
+.first-section .left-area .buttons button{
+    padding: 15px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+.first-section .left-area .buttons button:nth-child(1){
+    border: 2px solid var(--white);
+    color: var(--white);
+    background-color: transparent;
+}
+.first-section .left-area .buttons button:hover:nth-child(1){
+    background-color: rgba(255, 255, 255, 0.356);
+}
+.first-section .left-area .buttons button:nth-child(2){
+    border: none;
+    color: var(--blueDark);
+    background-color: var(--white);
+}
+.first-section .left-area .buttons button:hover:nth-child(2){
+    background-color: var(--blueDark);
+    color: var(--white);
+}
+
+.first-section .right-area{
+    background-color: var(--white);
+    overflow: hidden;
+    position: relative;
+}
+.first-section .right-area video{
+    height: 100%;
+    width: 120%;
+    object-fit: cover;
+}
+.first-section .right-area .filtro{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--blueLight), transparent);
+}
+.second-section{
+    background-color: var(--blueLight);
+    width: 100%;
+    height: 30vw;
+}
